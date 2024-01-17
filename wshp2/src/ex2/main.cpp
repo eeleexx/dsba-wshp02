@@ -23,12 +23,52 @@
 
 #include <iostream>
 
-// the entrypoint of the application
-int main()
-{
-    std::cout << "Hello world!";
+int main() {
+    int n;
+    std::cout << "Enter a number in range [1; 10]: ";
+    std::cin >> n;
 
-    // TODO: place your code starting from this line
+    if (n < 1 || n > 10) {
+        std::cout << "Wrong argument" << std::endl;
+        return 1;
+    }
+
+    std::cout << "\t";
+    for (int i = 1; i <= n; ++i) {
+        std::cout << i << '\t';
+    }
+    std::cout << "\n";
+    
+    for (int i = 1; i <= n; ++i) {
+        std::cout << i << "\t";
+        for (int j = 1; j <= n; ++j) {
+            std::cout << i * j << '\t';
+        }
+        std::cout << std::endl;
+    }
+    
+    std::cout << "\n--------------------------\n";
+
+    std::cout << "\t";
+    int i = 1;
+    while (i <= n) {
+        std::cout << i << '\t';
+        ++i;
+    }
+    std::cout << "\n";
+
+    i = 1;
+    while (i <= n) {
+        std::cout << i << "\t";
+        int j = 1;
+        while (j <= n) {
+            std::cout << i * j << '\t';
+            ++j;
+        }
+        std::cout << std::endl;
+        ++i;
+    }
 
     return 0;
 }
+

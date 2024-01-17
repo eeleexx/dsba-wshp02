@@ -17,9 +17,24 @@
 // the entrypoint of the application
 int main()
 {
-    std::cout << "Hello world!";
+    std::cout << "Hello world!" << std::endl;
 
-    // TODO: place your code starting from this line
+    size_t CharSize = sizeof(char);
+    size_t ShortSize = sizeof(short);
+    size_t IntSize = sizeof(int);
+    size_t LongSize = sizeof(long);
+    size_t LonglongSize = sizeof(long long);
+    size_t DoubleSize = sizeof(double);
+    size_t BoolSize = sizeof(bool);
+
+    std::cout << "Size of char: " << CharSize << " bytes" << std::endl;
+    std::cout << "Size of short: " << ShortSize << " bytes" << std::endl;
+    std::cout << "Size of int: " << IntSize << " bytes" << std::endl; 
+    std::cout << "Size of long: " << LongSize << " bytes" << std::endl;
+    std::cout << "Size of long long: " << LonglongSize << " bytes" << std::endl;
+    std::cout << "Size of double: " << DoubleSize << " bytes" << std::endl;
+    std::cout << "Size of bool: " << BoolSize << " bytes" << std::endl;
+
 
     return 0;
 }
